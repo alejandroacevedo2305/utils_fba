@@ -131,7 +131,7 @@ def train_and_evaluate(optimizer,loss_fun, modelo, train_loader,test_loader,save
                 best_eval_weights  = copy.deepcopy(modelo.state_dict())
                 #best_model =  copy.deepcopy(modelo.state_dict())
                 if verbose:
-                    print(f"NEW best \t{min_total_loss_val = }")
+                    print(f"NEW best \t{min_total_loss_val}")
                 if save_state_dict:
                     torch.save(best_eval_weights, "state_dict_best_evaluated_model.pth")
                     if verbose:
