@@ -223,7 +223,7 @@ def cultivar(model, init_biomasa = .07, init_glucosa = 1, init_oxigeno = .02, in
           cobra.util.add_lp_feasibility(model)
           feasibility = cobra.util.fix_objective_as_constraint(model)
           lex_constraints = cobra.util.add_lexicographic_constraints(
-              model, ['GrowthRate', 'Glc_supply', 'O2_supply', 'ETOH_production','OxPhos', 'G1'], ['max', 'min', 'min', 'max', 'max', 'max'])
+              model, ['GrowthRate', 'Glc_supply', 'O2_supply', 'ETOH_production','OxPhos', 'G1'], ['max', 'max', 'min', 'max', 'max', 'max'])
           
           all_fluxes.append(lex_constraints.values)
           all_times.append([t])
