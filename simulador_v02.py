@@ -565,7 +565,8 @@ def poner_pasos_alternancia(escritorios: dict, class_to_instantiate, niveles_ser
     return escritorios
 
 class forecast():
-    def __init__(self, db: str= 'data/mock_db.sqlite'):
+    #def __init__(self, db: str= 'data/mock_db.sqlite'):
+    def __init__(self, db: str= 'simulation_db.sqlite'):
         self.db = db
         self.forecast_model = None
 
